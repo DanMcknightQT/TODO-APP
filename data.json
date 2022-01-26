@@ -1,28 +1,28 @@
 { "tasks": {
     "id1": {
-            "title":"todo1",
-            "description": "Stuff",
+            "title":"Wake up",
+            "description": "Get up at 7:30am",
              "status": "completed"
             },
       "id2":{
-            "title":"todo1",
-            "description": "Stuff",
+            "title":"Eat breakfast",
+            "description": "Eat by 8:00am",
              "status": "completed"
             },  
      "id3":{
-            "title":"todo1",
-            "description": "Stuff",
-            "status": "completed"
+            "title":"Study before OJT.",
+            "description": "Study material for class",
+            "status": "active"
                 }, 
     "id4":{
-            "title":"todo1",
-            "description": "Stuff",
-            "status": "completed"
+            "title":"Take breaks",
+            "description": "Work for 1h, break for 5m.",
+            "status": "act"
                     }, 
     "id5":{
-           "title":"todo1",
-            "description": "Stuff",
-            "status": "completed"
+           "title":"Go to bed",
+            "description": "Go to bed by 11:30pm",
+            "status": "active"
                         }
     }
 }
