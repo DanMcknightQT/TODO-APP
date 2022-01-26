@@ -1,35 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="styles.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/styles.css"
-  <title>Frontend Mentor | Todo app</title>
-
-  
 </head>
 <body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="/main.js" ></script>
+    <div class="background-image">
+        <img class="pictures" src="images/bg-desktop-dark.jpg" alt="banner across top of page.">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                TO DO
+            </div>
+            <div class="theme">
+                <img class="pictures" src="images/icon-sun.svg" alt="a sun icon to toggle light/dark mode.">
+            </div>
+        </div>
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+                </div>
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit="addItem(event)">
+                    <input id="todo-input" type="text" placeholder="Create a new to do..." />
+                </form>
+            </div>
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark checked">
+                            <img class="pictures" src="images/icon-check.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="todo-text checked">
+                        
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                       
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                 
+                    </div>
+                </div>
+            </div>
+            <div class="todo-items-info">
+                <div class="items-left">
+                
+                </div>
+                <div class="items-statuses">
+                    <span class="active">All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div>
+                <div class="items-clear">
+                    <span>Clear Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>   
 </body>
 </html>
