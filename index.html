@@ -1,86 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Todo app</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="background-image">
-        <img class="pictures" src="images/darkMode/bg-desktop-dark.jpg" alt="banner across top of page.">
+  <div class="banner-con">
+    <div class="banner">
+      <div class="content">
+        <h1>TODO</h1>
+        <img src="./images/icon-sun.svg" alt="">
+      </div>
+      <div class="todo">
+        <form>
+          <input type="text" placeholder="Create a new todo.." id="text">
+        </form>
+        <div class="list">
+          <div class="todo-con">
+          </div>
+        </div>
+        <div class="info">
+          <p class="left">5 items left</p>
+          <div class="choice">
+            <p class="active">All</p>
+            <p>Active</p>
+            <p>Completed</p>
+          </div>
+          <p class="clear">Clear Completed</p>
+        </div>
+      </div>
     </div>
-    <div class="container">
-        <div class="header">
-            <div class="title">
-                TO DO
-            </div>
-            <div class="theme">
-                <img class="pictures" src="images/darkMode/icon-sun.svg" alt="a sun icon to toggle light/dark mode.">
-            </div>
-        </div>
-        <div class="new-todo">
-            <div class="check">
-                <div class="check-mark">
-                </div>
-            </div>
-            <div class="new-todo-input">
-                <form onsubmit="addItem(event)">
-                    <input id="todo-input" type="text" placeholder="Create a new to do..." />
-                </form>
-            </div>
-        </div>
-        <div class="todo-items-wrapper">
-            <div class="todo-items">
-                <div class="todo-item">
-                    <div class="check">
-                        <div class="check-mark checked">
-                            <img class="pictures" src="images/icon-check.svg" alt="checkmark showing what is ticked.">
-                        </div>
-                    </div>
-                    <div class="todo-text checked">
-                        
-                    </div>
-                </div>
-                <div class="todo-item">
-                    <div class="check">
-                        <div class="check-mark">
-                            
-                        </div>
-                    </div>
-                    <div class="todo-text">
-                       
-                    </div>
-                </div>
-                <div class="todo-item">
-                    <div class="check">
-                        <div class="check-mark">
-                        </div>
-                    </div>
-                    <div class="todo-text">
-                 
-                    </div>
-                </div>
-            </div>
-            <div class="todo-items-info">
-                <div class="items-left">
-                
-                </div>
-                <div class="items-statuses">
-                    <span class="active">All</span>
-                    <span>Active</span>
-                    <span>Completed</span>
-                </div>
-                <div class="items-clear">
-                    <span>Clear Completed</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="src/script.js"></script>  
+  </div>
+  <script src="./src/index.js"></script>
 </body>
 </html>

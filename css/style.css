@@ -1,203 +1,151 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
-body {
-    font-family: 'Josefin Sans', sans-serif;
+body{
+    width: 100%;
+    height: 100vh;
     background-color: hsl(235, 21%, 11%);
-    font-size: 18px;
+    font-family: system-ui;
+}
+.banner-con{
+    width: 100%;
+    height: 60vh;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    background: url("./images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
-
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-height: 350px;
-    z-index: -1;
-}
-
-.background-image img {
-    width: 100%;
-    object-fit: cover;
-    min-height: 350px;
-    object-position: left;
-}
-
-.container {
-    width: 100%;
-    max-width: 700px;
-    margin: 0px 30px;
-    margin-top: 100px;
-}
-
-.header {
+.content{
+    width: 600px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-top: 40vh;
 }
-
-.title {
-    color: white;
-    letter-spacing: 10px;
-    font-size: 50px;
-    font-weight: bold;
+.content h1{
+    letter-spacing: 3px;
+    color: #fff;
 }
-
-.new-todo {
+.content img{
+    height: 34px;
+}
+.todo{
+    width: 600px;
+    max-height: 498px;
+}
+form{
     width: 100%;
-    height: 70px;
+    height: 83px;
+}
+form input{
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    background: hsl(235, 24%, 19%);
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+input::placeholder{
+    color: #fff;
+    letter-spacing: 2px;
+}
+.list{
+    width: 100%;
+    max-height: 330px;
+    margin-top: 2rem
+}
+.todo-con{
+    width: 100%;
     background-color: hsl(235, 24%, 19%);
-    margin-top: 50px;
-    border-radius: 6px;
+    border-radius: 5px;
+}
+.todo-li{
     display: flex;
-}
-
-
-
-.check{
-    flex-basis: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.check-mark {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid hsl(237, 14%, 26%);
-    transition: all 0.25s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.check-mark img {
-    visibility: hidden;
-}
-
-.check-mark.checked img, .check-mark:hover img {
-    visibility: visible;
-}
-
-.check-mark:hover {
-    border-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
-    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
-}
-
-.check-mark.checked {
-    background-color: pink;
-    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
-}
-
-.todo-text.checked {
-    text-decoration: line-through;
-    color: hsl(233, 14%, 35%);
-}
-
-.new-todo-input {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-
-.new-todo-input input {
-    width: 100%;
-    padding: 10px 0px;
+    background-color: hsl(235, 24%, 19%);
+    padding: 1rem 0.9rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-style: italic;
     font-size: 18px;
-    background-color: transparent;
+    align-items: center;
+}
+.todo-li p{
+    width: 92%;
+    color: #fff;
+}
+.todo-li .check{
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.todo-li .check img{
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.todo-li .close{
+    background: transparent;
     border: none;
     outline: none;
-    color: hsl(234, 39%, 85%);
-}
-
-.new-todo-input form {
-    flex-grow: 1;
-    display: flex;
-}
-
-.new-todo-input input::placeholder {
-    color: hsl(233, 14%, 35%);
-}
-
-.todo-text {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: hsl(234, 39%, 85%);
-}
-
-.todo-item {
-    width: 100%;
-    height: 70px;
-    background-color: hsl(235, 24%, 19%);
-    display: flex;
-    border-bottom: 1px solid hsl(237, 14%, 26%);
+    opacity: 0;
+    transition: all 0.4s ease;
     cursor: pointer;
-    transition: all .25s ease;
-    transition-property: box-shadow, transform, border-color;
 }
-
-.todo-items-wrapper {
-    margin-top: 30px;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: hsl(235, 24%, 19%);
-    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
-    margin-bottom: 30px;
+.todo-li:hover .close{
+    opacity: 1;
 }
-
-.todo-items-info {
+.hr{
     width: 100%;
-    height: 70px;
-    background-color: hsl(235, 24%, 19%);
-    display: flex;
-    align-items: center;
-    color: hsl(233, 14%, 35%);
-    padding-left: 30px;
+    background: hsl(233, 14%, 35%);
+    height: 0.9px;
+}
+.info{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-right: 30px;
+    color: hsl(234, 11%, 52%);
+    padding: 1rem 0.9rem;
+    background: hsl(235, 24%, 19%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
 }
-
-.items-statuses {
+.choice{
     display: flex;
-    justify-content: center;
 }
-
-.items-statuses span  {
-    padding: 0 4px;
-    cursor: pointer;
+.choice p{
+    padding:  0 5px;
 }
-
-.items-clear {
-    cursor: pointer;
-    text-align: end;
+.info p:hover{
+ color: hsl(220, 98%, 61%);
 }
-
-.items-statuses span:hover, .items-clear:hover {
+.active{
     color: hsl(220, 98%, 61%);
 }
-
-.items-statuses .active  {
-    color: hsl(220, 98%, 61%);
+.active-check{
+    background: linear-gradient( hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
 }
-
-.todo-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
-    border-color: hsl(235, 24%, 19%);
+.active-check img{
+    transform: scale(1) !important;
 }
-
-
-
-
-
-
-
-
+.complete{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
